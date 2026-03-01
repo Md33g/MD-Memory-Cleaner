@@ -109,67 +109,7 @@ It was built as a **better alternative to MemReduct** — with more cleaning mod
 
 <br/>
 
-## 🔬 How It Works
-
-MD Mem Clean uses **undocumented NT kernel APIs** that Windows exposes through `ntdll.dll` — the same low-level path used by Microsoft's own tools like RAMMap and Process Explorer.
-
-```c
-// Direct kernel call to purge the Standby List
-SYSTEM_MEMORY_LIST_COMMAND cmd = MemoryPurgeStandbyList;
-NtSetSystemInformation(
-    SystemMemoryListInformation,  // class 80
-    &cmd,
-    sizeof(cmd)
-);
-```
-
-This bypasses all the usual Win32 abstraction layers and talks directly to the kernel memory manager — which is why it recovers far more RAM than standard approaches.
-
-**Cleaning pipeline (FULL mode):**
-```
-Pass 1:
-  [1] Trim working sets of all running processes
-  [2] Flush Modified Page List  →  write dirty pages to disk
-  [3] Purge Low-Priority Standby List
-  [4] Purge Standby List
-  [5] Clear System File Cache
-
-        ↓  200ms recovery pause  ↓
-
-Pass 2:
-  [6] Trim working sets again (catches re-allocations)
-  [7] Flush Modified Page List again
-  [8] Purge Standby List again
-```
-
 <br/>
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Windows 7 or later (x64 recommended)
-- [MinGW-w64](https://www.mingw-w64.org/) — install via:
-  ```bat
-  winget install mingw
-  ```
-
-### Build
-
-```bat
-git clone https://github.com/YOUR_USERNAME/md-mem-clean.git
-cd md-mem-clean
-build.bat
-```
-
-Output: `build\memclean.exe` *(also copied to root as `memclean.exe`)*
-
-### Or compile manually
-
-```bat
-gcc memclean.c -o memclean.exe -mwindows -O2 ^
-    -lpsapi -lgdi32 -lshell32 -lcomctl32 -luser32 -lwinmm -ladvapi32
-```
 
 <br/>
 
@@ -190,21 +130,6 @@ To use DEEP and FULL cleaning modes, MD Mem Clean needs these Windows privileges
 The included manifest requests UAC elevation automatically on launch — no manual right-click needed.
 
 <br/>
-
-## 🗂️ Project Structure
-
-```
-md-mem-clean/
-│
-├── memclean.c          ←  Full source code (~1,350 lines of C)
-├── memclean.ico        ←  Application icon (256/128/64/48/32/16px)
-├── memclean.manifest   ←  UAC elevation + DPI awareness + visual styles
-├── build.bat           ←  One-click build script (MinGW/GCC)
-├── run_as_admin.bat    ←  Launch with UAC prompt
-├── quick_clean.bat     ←  Shortcut for fast cleaning
-├── CHANGELOG.md        ←  Version history
-└── README.md           ←  You are here
-```
 
 <br/>
 
