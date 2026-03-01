@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="memclean.ico" width="120" height="120" alt="MD Mem Clean Icon"/>
+<img src="memD Mem Clean Icon"/>width="120" height="120" alt="MD Mem Clean Icon"/>
 
 # MD Mem Clean
 
