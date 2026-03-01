@@ -87,30 +87,6 @@ It was built as a **better alternative to MemReduct** — with more cleaning mod
 
 <br/>
 
-## 🆚 MD Mem Clean vs MemReduct
-
-| Feature | MemReduct | **MD Mem Clean** |
-|---|:---:|:---:|
-| Working Set trim | ✅ | ✅ |
-| Standby List purge | ✅ | ✅ |
-| Modified Page List flush | ✅ | ✅ |
-| **Low-Priority Standby purge** | ❌ | ✅ |
-| **Double-pass Full clean** | ❌ | ✅ |
-| **4 distinct cleaning modes** | ❌ | ✅ |
-| **Live cleaning indicator** | ❌ | ✅ |
-| **Admin status badge** | ❌ | ✅ |
-| **Page file stats** | ❌ | ✅ |
-| **Per-mode toggle switches** | ❌ | ✅ |
-| Dark theme | ❌ | ✅ |
-| System tray | ✅ | ✅ |
-| Auto-clean | ✅ | ✅ |
-| Portable single EXE | ✅ | ✅ |
-| Open source | ✅ | ✅ |
-
-<br/>
-
-<br/>
-
 <br/>
 
 ## 🛡️ Why Run as Administrator?
@@ -167,15 +143,6 @@ Open Settings from the main window to configure:
 - [ ] Multiple language support
 
 <br/>
-
-## 📄 License
-
-This project is licensed under the **MIT License** — free to use, modify, and distribute.
-
-See [LICENSE](LICENSE) for details.
-
-<br/>
-
 ---
 
 <div align="center">
