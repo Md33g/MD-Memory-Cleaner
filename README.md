@@ -143,7 +143,6 @@ Open Settings from the main window to configure:
 - [ ] Multiple language support
 
 <br/>
----
 
 <div align="center">
 
