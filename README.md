@@ -16,7 +16,7 @@
 <br/>
 
 > **Free your RAM. Instantly.**
-> A powerful, portable Windows memory cleaner built in pure C — with deep NT kernel cleaning, a live usage graph, auto-clean, and a sleek dark UI. No bloat. No install. Just results.
+> A powerful, portable Windows memory cleaner — with deep NT kernel cleaning, a live usage graph, auto-clean, and a sleek dark UI. No bloat. No install. Just results.
 
 <br/>
 
@@ -28,9 +28,9 @@
 
 ## 🖥️ What is MD Mem Clean?
 
-MD Mem Clean is a **free, open-source Windows memory optimizer** that goes deeper than Task Manager ever could. Instead of just killing processes, it communicates directly with the **Windows NT kernel** to purge standby memory lists, flush modified pages, trim process working sets, and clear the system file cache — recovering gigabytes of RAM that Windows silently holds onto.
+MD Mem Clean is a **free, Windows memory optimizer** that goes deeper than Task Manager ever could. Instead of just killing processes, it communicates directly with the **Windows NT kernel** to purge standby memory lists, flush modified pages, trim process working sets, and clear the system file cache — recovering gigabytes of RAM that Windows silently holds onto.
 
-It was built as a **better alternative to MemReduct** — with more cleaning modes, a live graph, smarter auto-clean, and a fully custom dark UI.
+It was built with more cleaning modes, a live graph, smarter auto-clean, and a fully custom dark UI.
 
 <br/>
 
